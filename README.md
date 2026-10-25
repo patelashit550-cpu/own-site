@@ -95,8 +95,13 @@ Copy `.env.local.example` to `.env.local` for `NEXT_PUBLIC_SITE_URL` and optiona
 
 ```bash
 npm run ship
+npm run ship -- --push -m "Publish first essay."
+npm run ship -- --mirror
 npm run ship -- --ipfs
 ```
+
+- `--push` commits and pushes to `main`. Markdown under `ontology/` whose `stage` is not `published` or `canonical` (drafts, reviews, or no stage) is left out of the commit and listed, so unfinished writing stays on your machine.
+- `--mirror` copies the built site in `out/` to the `gh-pages` branch of another repo, for example to serve it on GitHub Pages. Set `MIRROR_REPO=REPLACE_ME/REPLACE_ME` (owner/repo) in `.env.local`, and `MIRROR_CNAME=your.domain` if it uses a custom domain. It replaces that branch on every run and never touches `main`.
 
 ## Checks
 
@@ -108,4 +113,6 @@ npm run build
 
 ## License / credit
 
-This utility is provided without reservations - copyleft Transition Insight 
+This utility is provided without reservations - copyleft Transition Insight
+
+Offered as is. No support is promised, but you're welcome to use it, change it and share it.
