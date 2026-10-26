@@ -1,18 +1,18 @@
 # How to Build a Web Application Using Own Site and an AI IDE
 
-This guide provides a step-by-step workflow for using the [`patelashit550-cpu/own-site`](https://github.com/patelashit550-cpu/own-site) repository template alongside an AI-assisted IDE (such as Cursor, VS Code with GitHub Copilot / Claude Dev, or Windsurf) to generate a custom website or web application.
+This guide provides a step-by-step workflow for using the [`transition-insight-labs/own-site`](https://github.com/transition-insight-labs/own-site) repository template alongside an AI-assisted IDE (such as Cursor, VS Code with GitHub Copilot / Claude Dev, or Windsurf) to generate a custom website or web application.
 
 ---
 
 ### Step 1: Set Up the Repository
 
 1. **Use the Template or Clone the Repo**
-   * Go to the repository: `https://github.com/patelashit550-cpu/own-site`.
+   * Go to the repository: `https://github.com/transition-insight-labs/own-site`.
    * Click the **"Use this template"** button at the top right to create a new repository under your own GitHub account.
    * Alternatively, clone it locally using your terminal
    * Ask ChatGPT or Gemini for support throughout until you have the IDE configured. Thereafter use them to supplement IDE agent support.
      ```bash
-     git clone https://github.com/patelashit550-cpu/own-site.git my-new-site
+     git clone https://github.com/transition-insight-labs/own-site.git my-new-site
      cd my-new-site
      ```
 

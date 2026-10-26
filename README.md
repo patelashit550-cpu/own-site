@@ -4,7 +4,7 @@ Content-shorn Next.js site scaffold. Clone it, open it in an IDE, and drop in yo
 
 Display name: **Own Site**. Repo: `own-site`.
 
-The app shell (layouts, bento home, reading routes, theming, draft→published frontmatter) is inspired by [Transition Insight](https://github.com/patelashit550-cpu/transition-insight). This template does not include that project's personal corpus.
+The app shell (layouts, bento home, reading routes, theming, draft→published frontmatter) is inspired by [Transition Insight](https://github.com/transition-insight-labs/transition-insight). This template does not include that project's personal corpus.
 
 ## Preview
 
