@@ -3,12 +3,26 @@ import { withBasePath } from "@/lib/base-path";
 export const DEFAULT_SITE_URL = "https://example.com";
 
 export const SiteIdentity = {
+  /** Site name. Shown in the header, browser tab, and metadata. */
   name: "Own Site",
   shortName: "Own Site",
-  description: "REPLACE_ME — one-sentence description of the site",
+  /** One line under the name in the home-page header. */
+  tagline: "REPLACE_ME: one-line description of the site",
+  /** One sentence used for search and social previews. */
+  description: "REPLACE_ME: one-sentence description of the site",
+  /** Author name used in essay metadata. */
+  author: "REPLACE_ME",
+  /** Short line at the bottom of the first home-page card. */
+  colophon: "REPLACE_ME",
   url: process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL,
   icon: withBasePath("/visuals/icon.png"),
 };
+
+/** Splits the name into two parts for the two-tone wordmark: first word, then the rest. */
+export function splitSiteName(name: string = SiteIdentity.name): { main: string; sub: string } {
+  const parts = name.trim().split(/\s+/);
+  return { main: parts[0] ?? "", sub: parts.slice(1).join(" ") };
+}
 
 export const LayoutConfig = {
   contentShellMaxWidth: "max-w-6xl",

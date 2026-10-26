@@ -164,7 +164,7 @@ function contentJsonLd(
     ld.datePublished = published;
     ld.dateModified = published;
   }
-  ld.author = { "@type": "Person", name: "REPLACE_ME", url: SiteIdentity.url };
+  ld.author = { "@type": "Person", name: SiteIdentity.author, url: SiteIdentity.url };
   ld.publisher = { "@type": "Organization", name: SiteIdentity.name, url: SiteIdentity.url };
   const img = toAbsUrl(typeof frontmatter.image === "string" ? frontmatter.image : undefined);
   if (img) ld.image = img;

@@ -14,6 +14,8 @@ Home:
 Example essay:
 ![Example essay](docs/preview-welcome.png)
 
+Using an AI assistant? Point it at [SETUP.md](SETUP.md) and it will ask you a few questions and set up the site.
+
 ## Install and run
 
 ```bash
@@ -66,6 +68,7 @@ order: 1
 publishedAt: 2026-01-01
 tags:
   - REPLACE_ME
+series: writing      # section this entry belongs to (matches its folder under ontology/)
 showInNav: true
 ---
 ```
@@ -82,16 +85,13 @@ Hub example: `src/lib/content-routes.ts` maps `/writing/essays` to the `ontology
 
 ## Site identity
 
-Edit `src/config/site.ts` and the header copy in:
-
-- `src/components/layout/Header.tsx`
-- `src/components/layout/NarrativeHeader.tsx`
+Everything visible about the site is set in `src/config/site.ts`: name, tagline, description, author, the line at the bottom of the first home card (`colophon`), and the home columns. The headers read from it, so you do not need to edit components. A two-word name is shown as a two-tone wordmark (first word, then the rest).
 
 Copy `.env.local.example` to `.env.local` for `NEXT_PUBLIC_SITE_URL` and optional IPFS keys. Never commit `.env.local`.
 
 ## Optional ship / IPFS
 
-`npm run ship` builds a global export. Add `--ipfs` only if you have filled `PINATA_JWT` in `.env.local` (see `.env.sovereign.example`). These scripts are examples, not required to use the site.
+`npm run ship` builds a global export. Add `--ipfs` only if you have filled `PINATA_JWT` in `.env.local` (see `.env.sovereign.example`, which lists the optional IPFS and Pinata keys; copy the ones you need into `.env.local`). These scripts are examples, not required to use the site.
 
 ```bash
 npm run ship

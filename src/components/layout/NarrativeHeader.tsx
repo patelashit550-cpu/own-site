@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import { BentoRegistry } from "@/config/site";
+import { BentoRegistry, SiteIdentity, splitSiteName } from "@/config/site";
 import { withBasePath } from "@/lib/base-path";
 import { resolveBentoKeyFromPathname } from "@/lib/nav-visibility-shared";
 import { useNavVisibility } from "@/components/layout/NavVisibilityContext";
@@ -43,7 +43,7 @@ const NarrativeHeader = () => {
   return (
     <header className="p3-narrative-header">
       <div className="p3-narrative-inner">
-        <Link href="/" className="p3-narrative-brand" aria-label="Own Site — home">
+        <Link href="/" className="p3-narrative-brand" aria-label={`${SiteIdentity.name}: home`}>
           <span className="p3-narrative-brand__mark">
             <Image
               src={withBasePath("/visuals/icon.png")}
@@ -55,8 +55,10 @@ const NarrativeHeader = () => {
             />
           </span>
           <span className="p3-narrative-brand__wordmark">
-            <span className="p3-narrative-brand__wordmark--main">Own</span>
-            <span className="p3-narrative-brand__wordmark--sub">Site</span>
+            <span className="p3-narrative-brand__wordmark--main">{splitSiteName().main}</span>
+            {splitSiteName().sub && (
+              <span className="p3-narrative-brand__wordmark--sub">{splitSiteName().sub}</span>
+            )}
           </span>
         </Link>
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { SiteIdentity } from "@/config/site";
 import React, { forwardRef, useCallback, useLayoutEffect, useRef, useState } from 'react'
 import type { ForwardedRef } from 'react'
 import Link from 'next/link'
@@ -226,7 +227,7 @@ export const BentoCard = forwardRef<HTMLDivElement, BentoProps>(function BentoCa
         </nav>
 
         {showColophon && (
-          <p className="bento-box-colophon">REPLACE_ME</p>
+          <p className="bento-box-colophon">{SiteIdentity.colophon}</p>
         )}
       </div>
     </div>

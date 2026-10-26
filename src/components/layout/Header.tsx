@@ -3,7 +3,10 @@
 import { withBasePath } from "@/lib/base-path";
 import Image from "next/image";
 
+import { SiteIdentity, splitSiteName } from "@/config/site";
+
 export function Header() {
+  const wordmark = splitSiteName();
   return (
     <header className="p3-landing-hero w-full font-sans">
       <div className="p3-header-strip p3-content-shell">
@@ -11,7 +14,7 @@ export function Header() {
           <div className="p3-header-emblem shrink-0">
             <Image
               src={withBasePath("/visuals/icon.png")}
-              alt="Own Site mark"
+              alt={`${SiteIdentity.name} mark`}
               width={96}
               height={96}
               priority
@@ -21,10 +24,10 @@ export function Header() {
 
           <div className="p3-header-brand">
             <h1 className="p3-brand-wordmark">
-              <span className="p3-brand-title-main">Own</span>
-              <span className="p3-brand-title-sub">Site</span>
+              <span className="p3-brand-title-main">{wordmark.main}</span>
+              {wordmark.sub && <span className="p3-brand-title-sub">{wordmark.sub}</span>}
             </h1>
-            <p className="p3-brand-tagline">REPLACE_ME — one-line description of the site</p>
+            <p className="p3-brand-tagline">{SiteIdentity.tagline}</p>
           </div>
         </div>
       </div>
