@@ -111,8 +111,14 @@ npm run lint
 npm run build
 ```
 
-## License / credit
+## Licence and disclaimer
 
-This utility is provided without reservations - copyleft Transition Insight
+Own Site is released under the [MIT License](LICENSE). You are free to use, modify and redistribute it, including for commercial use, as long as the licence notice stays with the code.
 
-Offered as is. No support is promised, but you're welcome to use it, change it and share it.
+- It is provided as is, with no warranty of any kind.
+- The author is not liable for any loss, damage, downtime, data loss or security issue arising from its use.
+- You are responsible for your own content, hosting, domains, keys and secrets, backups, and for complying with the laws where you publish (for example privacy, copyright and accessibility).
+- Third-party services you use with it (GitHub, IPFS and Pinata, hosting providers, AI assistants) have their own terms.
+- This is not legal advice.
+
+The licence covers the template code only. Your own writing and images remain yours.

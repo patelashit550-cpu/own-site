@@ -9,7 +9,8 @@ This file is for an AI assistant (in an IDE or chat) that a user has pointed at 
 3. After each group, apply the answers (see "Where each answer goes").
 4. When all groups are done, run `npm install` (if needed) and `npm run build`, then run `npm run dev` and show the user the home page at http://localhost:3000 and one essay page.
 5. Summarize what you changed and list anything still set to `REPLACE_ME`.
-6. Do not commit, push, or publish anything unless the user asks.
+6. Mention once that the template is MIT-licensed and provided as is, and point to the "Licence and disclaimer" section of the README.
+7. Do not commit, push, or publish anything unless the user asks.
 
 ## Questions
 
