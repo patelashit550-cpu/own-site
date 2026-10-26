@@ -4,7 +4,7 @@
 
 Own Site is a static website template built with Next.js. You write in Markdown, run one build command, and host the result anywhere, including free on GitHub Pages or Cloudflare Pages. There is no database, login page or plugin system to maintain. It's MIT-licensed, so you can use it for personal or commercial sites. An AI assistant can set it up for you by following [SETUP.md](SETUP.md).
 
-Built by [Ashit Milne](https://transition-insight.org/) in Toronto. Read more on the [Your Own Site](https://transition-insight.org/chronicle/own-site/) page.
+Built by [Ashit Milne](https://transition-insight.org/) in Acton, Ontario. Read more on the [Your Own Site](https://transition-insight.org/chronicle/own-site/) page.
 
 Clone it, open it in an IDE, and drop in your own writing.
 
