@@ -54,7 +54,7 @@ export async function uploadDirectory(dir) {
     JSON.stringify({
       name: rootName,
       keyvalues: {
-        project: "tannery",
+        project: "writing",
         tier: process.env.NEXT_PUBLIC_CONTENT_TIER?.trim() || "global",
       },
     }),

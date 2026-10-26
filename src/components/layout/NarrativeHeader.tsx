@@ -20,7 +20,7 @@ type BentoSection = (typeof BentoRegistry)[keyof typeof BentoRegistry];
 
 const resolveSection = (pathname: string): BentoSection => {
   const p = pathname.replace(/\/+$/, "") || "/";
-  if (p.startsWith("/tannery")) return BentoRegistry.B2;
+  if (p.startsWith("/writing")) return BentoRegistry.B2;
   if (p.startsWith("/notes")) return BentoRegistry.B3;
   return BentoRegistry.B1;
 };
@@ -43,7 +43,7 @@ const NarrativeHeader = () => {
   return (
     <header className="p3-narrative-header">
       <div className="p3-narrative-inner">
-        <Link href="/" className="p3-narrative-brand" aria-label="Skin in the Game — home">
+        <Link href="/" className="p3-narrative-brand" aria-label="Own Site — home">
           <span className="p3-narrative-brand__mark">
             <Image
               src={withBasePath("/visuals/icon.png")}
@@ -55,8 +55,8 @@ const NarrativeHeader = () => {
             />
           </span>
           <span className="p3-narrative-brand__wordmark">
-            <span className="p3-narrative-brand__wordmark--main">Skin in</span>
-            <span className="p3-narrative-brand__wordmark--sub">the Game</span>
+            <span className="p3-narrative-brand__wordmark--main">Own</span>
+            <span className="p3-narrative-brand__wordmark--sub">Site</span>
           </span>
         </Link>
 

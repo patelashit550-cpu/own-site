@@ -3,9 +3,9 @@ import { withBasePath } from "@/lib/base-path";
 export const DEFAULT_SITE_URL = "https://example.com";
 
 export const SiteIdentity = {
-  name: "Skin in the Game (Tannery)",
-  shortName: "Tannery",
-  description: "REPLACE_ME — your tagline",
+  name: "Own Site",
+  shortName: "Own Site",
+  description: "REPLACE_ME — one-sentence description of the site",
   url: process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL,
   icon: withBasePath("/visuals/icon.png"),
 };
@@ -41,36 +41,36 @@ export type BentoSectionConfig = {
  */
 export const BentoRegistry: Record<"B1" | "B2" | "B3", BentoSectionConfig> = {
   B1: {
-    title: "Hide",
-    label: "Hide",
-    nodeKicker: "σκῦτος",
-    subtitle: "REPLACE_ME — about",
-    status: "NODE_ACTIVE // 001",
+    title: "About",
+    label: "About",
+    nodeKicker: "01",
+    subtitle: "Who you are and what this site covers",
+    status: "01",
     requiresAuth: false,
     series: [
-      { name: "About", desc: "What this site is", dataPoint: "0xA1", href: "/hide/about" },
+      { name: "About", desc: "Introduction to the site", dataPoint: "01", href: "/site/about" },
     ],
   },
   B2: {
-    title: "Tannery",
-    label: "Tannery",
-    nodeKicker: "βυρσοδεψεῖον",
-    subtitle: "REPLACE_ME — essays",
-    status: "NODE_STABLE // 002",
+    title: "Essays",
+    label: "Essays",
+    nodeKicker: "02",
+    subtitle: "Long-form writing",
+    status: "02",
     requiresAuth: false,
     series: [
-      { name: "Essays", desc: "Working notes", dataPoint: "0xB1", href: "/tannery/essays" },
+      { name: "Essays", desc: "All published essays", dataPoint: "02", href: "/writing/essays" },
     ],
   },
   B3: {
     title: "Notes",
     label: "Notes",
-    nodeKicker: "δέλτος",
-    subtitle: "REPLACE_ME — ledger",
-    status: "SIGNAL_LIVE // 003",
+    nodeKicker: "03",
+    subtitle: "Short notes and updates",
+    status: "03",
     requiresAuth: false,
     series: [
-      { name: "Ledger", desc: "Sample dispatch", dataPoint: "0xC1", href: "/notes/ledger" },
+      { name: "Notes", desc: "Sample note", dataPoint: "03", href: "/notes/sample-note" },
     ],
   },
 };

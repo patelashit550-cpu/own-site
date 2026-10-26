@@ -1,18 +1,18 @@
-# Skin in the Game (Tannery)
+# Own Site
 
 Content-shorn Next.js site scaffold. Clone it, open it in an IDE, and drop in your own writing.
 
-Display name: **Skin in the Game (Tannery)**. Repo: `tannery`.
+Display name: **Own Site**. Repo: `own-site`.
 
 The app shell (layouts, bento home, reading routes, theming, draft→published frontmatter) is inspired by [Transition Insight](https://github.com/patelashit550-cpu/transition-insight). This template does not include that project's personal corpus.
 
 ## Preview
 
 Home:
-![Skin in the Game home](docs/preview-home.png)
+![Own Site home page](docs/preview-home.png)
 
-Welcome to the Tannery:
-![Welcome to the Tannery](docs/preview-welcome.png)
+Example essay:
+![Example essay](docs/preview-welcome.png)
 
 ## Install and run
 
@@ -23,7 +23,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-For an AI-IDE walkthrough, see [How to Build a Web Application Using Tannery and an AI IDE](docs/how-to-build-with-ai-ide.md).
+For an AI-IDE walkthrough, see [How to Build a Web Application Using Own Site and an AI IDE](docs/how-to-build-with-ai-ide.md).
 
 Production static export:
 
@@ -47,10 +47,10 @@ Put Markdown (or MDX) under **`ontology/`**. That is the corpus root. There is n
 
 ```
 ontology/
-  hide/about.md          →  /hide/about/
-  tannery/welcome.md     →  /tannery/welcome/  and hub  /tannery/essays/
-  tannery/sample.md      →  /tannery/essays/sample/
-  notes/ledger.md        →  /notes/ledger/
+  site/about.md          →  /site/about/
+  writing/welcome.md     →  /writing/welcome/  and hub  /writing/essays/
+  writing/sample.md      →  /writing/essays/sample/
+  notes/sample-note.md        →  /notes/sample-note/
   notes/draft-note.md    →  local only (stage: draft)
 ```
 
@@ -78,7 +78,7 @@ Replace the placeholder posts. Do not leave `REPLACE_ME` in shipped writing.
 
 Home columns and reading-header siblings live in `src/config/site.ts` (`BentoRegistry`). Point `href` at `/topic/slug` routes that match files under `ontology/`.
 
-Hub example: `src/lib/content-routes.ts` maps `/tannery/essays` to the `ontology/tannery/` folder.
+Hub example: `src/lib/content-routes.ts` maps `/writing/essays` to the `ontology/writing/` folder.
 
 ## Site identity
 

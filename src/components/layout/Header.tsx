@@ -11,7 +11,7 @@ export function Header() {
           <div className="p3-header-emblem shrink-0">
             <Image
               src={withBasePath("/visuals/icon.png")}
-              alt="Skin in the Game (Tannery) mark"
+              alt="Own Site mark"
               width={96}
               height={96}
               priority
@@ -21,10 +21,10 @@ export function Header() {
 
           <div className="p3-header-brand">
             <h1 className="p3-brand-wordmark">
-              <span className="p3-brand-title-main">Skin in</span>
-              <span className="p3-brand-title-sub">the Game</span>
+              <span className="p3-brand-title-main">Own</span>
+              <span className="p3-brand-title-sub">Site</span>
             </h1>
-            <p className="p3-brand-tagline">TANNERY — REPLACE_ME TAGLINE</p>
+            <p className="p3-brand-tagline">REPLACE_ME — one-line description of the site</p>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { EssayStub } from "@/lib/markdown";
 import { BentoRegistry } from "@/config/site";
 
-export type ContentHubKey = "tannery/essays";
+export type ContentHubKey = "writing/essays";
 
 type FolderHubConfig = {
   mode: "folder";
@@ -28,13 +28,13 @@ export type ContentHubConfig = {
 } & (FolderHubConfig | SeriesHubConfig);
 
 export const CONTENT_HUBS: Record<ContentHubKey, ContentHubConfig> = {
-  "tannery/essays": {
-    publicBase: ["tannery", "essays"],
-    navKicker: "TANNERY",
+  "writing/essays": {
+    publicBase: ["writing", "essays"],
+    navKicker: "ESSAYS",
     landerSlug: "welcome",
     hubLanding: "first",
     mode: "folder",
-    ontologyTopicPath: ["tannery"],
+    ontologyTopicPath: ["writing"],
     sequentialNav: true,
   },
 };

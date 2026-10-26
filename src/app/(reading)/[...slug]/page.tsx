@@ -33,7 +33,7 @@ export async function generateStaticParams() {
       (seriesName) => listEssaysBySeriesForBuild(seriesName)
     ),
     ...listBentoLegacyStaticParams(
-      () => listEssaysForBuild(["hide"]),
+      () => listEssaysForBuild(["site"]),
       (parts) => getProfileData([parts[parts.length - 1]!]),
       (stage) => isStageIncludedInBuild(normalizeStage(stage))
     ),

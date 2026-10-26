@@ -1,15 +1,15 @@
 ---
-title: Draft note
-subtitle: REPLACE_ME — visible only in local / next dev
+title: Example draft
+subtitle: Visible only when running locally
 slug: draft-note
 stage: draft
 order: 2
 publishedAt: 2026-01-05
 tags:
-  - REPLACE_ME
+  - example
 showInNav: true
 ---
 
-This file is a **draft**. `npm run build` (global tier) will not export it.
+This file has `stage: draft`, so the public build (`npm run build`) does not include it.
 
-Run `npm run dev` to see drafts in nav and routes. Bump `stage` to `review` or `published` when you want it to ship.
+Run `npm run dev` to see drafts locally. Change `stage` to `review` or `published` when it is ready.
